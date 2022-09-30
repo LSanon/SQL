@@ -1,0 +1,43 @@
+/** Clothing Store:
+Tank Top (15)
+Shorts (13)
+Dresses (4)
+Heels (21)
+Hats (3)
+Bathing Suits (15)
+Slippers (27)
+Jackets (8)
+Leggings (4)
+Socks (18)
+Skirts (9)
+Scarves (11)
+Crocs (22)
+Sneakers (45)
+Sweaters (17)
+**/
+
+CREATE TABLE items (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER, price INTEGER);
+
+INSERT INTO items VALUES (1, "Tank", 15, 2, 20);
+INSERT INTO items VALUES (2, "Shorts", 13, 10,30 );
+INSERT INTO items VALUES (3, "Dresses", 4, 10, 4);
+INSERT INTO items VALUES (4, "Heels", 21, 5, 11);
+INSERT INTO items VALUES (5, "Hats", 3, 2, 14);
+INSERT INTO items VALUES (6, "Bathing Suits", 15, 5, 8.20);
+INSERT INTO items VALUES (7, "Slippers", 27, 2, 17.55);
+INSERT INTO items VALUES (8, "Jackets",8, 3, 40);
+INSERT INTO items VALUES (9, "Leggings", 4, 5, 8);
+INSERT INTO items VALUES (10, "Socks", 18, 13, 2.39);
+INSERT INTO items VALUES (11, "Skirts", 9, 5, 20);
+INSERT INTO items VALUES (12, "Scarves", 11, 16, 12);
+INSERT INTO items VALUES (13, "Crocs", 22, 5, 30);
+INSERT INTO items VALUES (14, "Sneakers", 45, 2, 65);
+INSERT INTO items VALUES (15, "Sweaters", 17, 10, 19);
+
+SELECT * FROM Items;
+
+SELECT * FROM items WHERE quantity >10 ORDER BY quantity;
+
+SELECT aisle, SUM(quantity) FROM items GROUP BY aisle;
+
+SELECT * FROM items where price <16 ORDER BY price;

@@ -1,0 +1,29 @@
+/* Create table about the people and what they do here */
+CREATE TABLE Singers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Fullname TEXT,
+    Age INTEGER,
+    Song TEXT);
+INSERT INTO Singers (fullname, age, song) VALUES ("Ayra Star", 20, "Away"); 
+INSERT INTO Singers (fullname, age, song) VALUES ("Davido", 29, "Jowo"); 
+INSERT INTO Singers (fullname, age, song) VALUES ( "King Promise", 27, "Promise"); 
+INSERT INTO Singers (fullname, age, song) VALUES ("Yinka Ayefele", 54, "Favour"); 
+INSERT INTO Singers (fullname, age, song) VALUES ("Asake", 27, "Terminator"); 
+
+CREATE table Wealth (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Singers_id INTEGER,
+    Net_worth TEXT);
+
+INSERT INTO wealth (Singers_id, net_worth) VALUES (1, "1.5 Million"); 
+INSERT INTO wealth (Singers_id, net_worth) VALUES (2, "50 Million"); 
+INSERT INTO wealth (Singers_id, net_worth) VALUES (3, "3 Million"); 
+INSERT INTO wealth (Singers_id, net_worth) VALUES (4, "400 Thousand"); 
+INSERT INTO wealth (Singers_id, net_worth) VALUES (5, "1.2 Million"); 
+
+/*Return total net worth for each Singers*/
+SELECT Singers.fullname, wealth.net_worth
+FROM Singers
+JOIN Wealth
+ON Singers.id = Net_worth;
+SELECT * FROM Wealth; 
